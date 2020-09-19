@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
     <title>Shorten URL Service</title>
 </head>
 <body>
@@ -17,39 +16,7 @@
         </textarea>
         </form>
     </div>
-
-<!--    <form method="POST">
-        <label for="longurl">LONG URL:</label>
-        <input type="text" id="longurl" name="long_url">
-        <input type="submit" id="shorten" name="shorten"><br>
-        <label for="shorturl">SHORT URL:</label>
-        <input type="text" id="shorturl" name="short_url">
-    </form>-->
-
 <script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
 <script src="{{ url_for('static', filename='js/custom.js') }}"></script>
-<!--<script>-->
-<!--    $(function () {-->
-<!--        $("#shorten").click(function(){-->
-<!--            var data = {'domain':'','url':$('#longurl').val()};-->
-<!--            console.log(data);-->
-<!--            $.ajax({-->
-<!--                type: 'POST',-->
-<!--                dataType: "json",-->
-<!--                url: 'https://uovraoetk3.execute-api.ap-southeast-1.amazonaws.com/dev/shorturl',-->
-<!--                data: {'domain':'','url':$('#longurl').val()},-->
-<!--                beforeSend: function(request) {-->
-<!--                    request.setRequestHeader("x-api-key", "CVZC1HcAVj1FrEmKygY246ABjgizzgOf7dfRiEw0");-->
-<!--                },-->
-<!--                success: function(response){-->
-<!--                    console.log(response);-->
-<!--                },-->
-<!--            });-->
-<!--        });-->
-<!--    });-->
-
-
-<!--</script>-->
-
 </body>
 </html>
