@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request
 import requests,json, os
 
 app = Flask(__name__)
@@ -9,7 +9,7 @@ def redirect_long_url(resource_id):
     domain = request.host_url.split('/')[2].split(':')[0]
     api_url = 'https://uovraoetk3.execute-api.ap-southeast-1.amazonaws.com/dev/shorturl'
     response = requests.get(api_url, json={"domain": domain, "resource_id": resource_id})
-    return redirect(response.json()['result'], code=301)
+    return 'Moved Permanently', 301, {'Location':response.json()['result']}
 
 
 @app.route('/', methods=['GET'])
